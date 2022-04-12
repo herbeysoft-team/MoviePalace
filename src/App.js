@@ -11,9 +11,10 @@ const API_URL = 'http://www.omdbapi.com?apikey=e7e419e1';
 
 
 const App = () =>{
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState([]); 
   const [searchTerm, setSearchTerm] = useState('');
 
+  //fetch date from the OMDbi Api
   const searchMovies = async(title) =>{
     const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json();
